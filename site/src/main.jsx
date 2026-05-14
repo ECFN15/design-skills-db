@@ -1,9 +1,71 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
 const localInstallCommand =
   "npx skills add ~/Desktop/design-skills-db/publish/refero-design-skills";
+
+const skills = [
+  "technical-sans",
+  "high-end-design",
+  "clean-saas",
+  "editorial-type",
+  "dark-ui",
+  "motion",
+  "minimal-design",
+  "cyber-neon",
+  "serif-display",
+  "technical-ui",
+  "glossy-modern",
+  "vibrant-accents",
+];
+
+const skillModules = [
+  {
+    name: "technical-sans",
+    role: "Developer tooling",
+    description: "Interfaces précises pour docs, CLI, agents IA et produits techniques.",
+  },
+  {
+    name: "high-end-design",
+    role: "Premium product",
+    description: "Rythme éditorial, surfaces premium et conversion plus calme.",
+  },
+  {
+    name: "clean-saas",
+    role: "SaaS clarity",
+    description: "Écrans lisibles, hiérarchie nette et composants faciles à scanner.",
+  },
+  {
+    name: "editorial-type",
+    role: "Type direction",
+    description: "Titres plus affirmés et compositions pilotées par la typographie.",
+  },
+  {
+    name: "motion",
+    role: "Interaction layer",
+    description: "Transitions utiles, reveal mesuré et rythme sans surcharge.",
+  },
+  {
+    name: "dark-ui",
+    role: "Dark systems",
+    description: "Produits sombres, contrastes sérieux et panneaux denses.",
+  },
+  {
+    name: "serif-display",
+    role: "Editorial polish",
+    description: "Moments plus luxueux pour pages de marque et sections hero.",
+  },
+  {
+    name: "technical-ui",
+    role: "Operational UI",
+    description: "Dashboards, tables, états et contrôles orientés production.",
+  },
+];
+
+function shuffleSkills(items) {
+  return [...items].sort(() => Math.random() - 0.5);
+}
 
 function CopyIcon() {
   return (
@@ -45,72 +107,147 @@ function CommandBar() {
   }
 
   return (
-    <div className="command-wrap" aria-label="Commande locale d'installation">
-      <span className="prompt">$</span>
-      <code>{localInstallCommand}</code>
-      <button className="copy-button" type="button" onClick={copyCommand}>
-        <span>{copied ? "COPIE" : "COPIER"}</span>
-        <CopyIcon />
-      </button>
+    <div className="command-module" aria-label="Commande locale d'installation">
+      <div className="command-meta">
+        <span>local install</span>
+        <span>powershell ready</span>
+      </div>
+      <div className="command-line">
+        <span className="prompt">$</span>
+        <code>{localInstallCommand}</code>
+        <button className="copy-button" type="button" onClick={copyCommand}>
+          <span>{copied ? "COPIE" : "COPIER"}</span>
+          <CopyIcon />
+        </button>
+      </div>
     </div>
   );
 }
 
-function BrowserPreview() {
+const featuredSkills = [
+  { name: "technical-sans", scope: "dev tools" },
+  { name: "clean-saas", scope: "product UI" },
+  { name: "high-end-design", scope: "premium pages" },
+  { name: "technical-ui", scope: "dashboards" },
+];
+
+function InstallerModule() {
   return (
-    <div className="browser-preview" aria-label="Apercu de page generee par un skill design">
-      <div className="mini-nav">
-        <span>Refero</span>
-        <span>Styles</span>
-        <span>Docs</span>
-        <strong>Installer</strong>
+    <section className="module-panel installer-module" aria-label="Module d'installation locale">
+      <div className="module-topline">
+        <span>local installer</span>
+        <strong>ready</strong>
       </div>
-      <div className="preview-body">
-        <span className="tiny-label">Generated interface</span>
-        <h2>Less slop, sharper systems.</h2>
-        <p>Skills locaux pour imposer une direction visuelle claire aux agents.</p>
-        <div className="preview-actions">
+      <div className="terminal-card">
+        <div className="terminal-dots">
+          <span />
           <span />
           <span />
         </div>
+        <pre>{`> skills add ./publish/refero-design-skills
+source   local pack
+target   current project
+mode     no remote fetch
+
+✓ manifest checked
+✓ 23 skills available
+✓ command copied locally`}</pre>
       </div>
-      <div className="floating-shot shot-a" />
-      <div className="floating-shot shot-b" />
+      <div className="route-list">
+        <p>
+          <span>path</span>
+          <strong>~/Desktop/design-skills-db/publish</strong>
+        </p>
+        <p>
+          <span>later</span>
+          <strong>github-ready npx route</strong>
+        </p>
+      </div>
+    </section>
+  );
+}
+
+function SkillCoverageModule() {
+  return (
+    <section className="module-panel coverage-module" aria-label="Module de couverture des skills">
+      <div className="module-topline">
+        <span>skill coverage</span>
+        <strong>23 systems</strong>
+      </div>
+      <div className="coverage-score">
+        <span>selected for this page</span>
+        <strong>technical-sans</strong>
+      </div>
+      <div className="coverage-list">
+        {featuredSkills.map((skill) => (
+          <p key={skill.name}>
+            <span>{skill.name}</span>
+            <strong>{skill.scope}</strong>
+          </p>
+        ))}
+      </div>
+      <div className="compatibility-row">
+        <span>Cursor</span>
+        <span>Codex</span>
+        <span>Claude Code</span>
+        <span>Gemini CLI</span>
+      </div>
+    </section>
+  );
+}
+
+function SystemBoard() {
+  return (
+    <div className="system-board" aria-label="Modules techniques du pack local">
+      <div className="board-header">
+        <span>refero local pack</span>
+        <strong>installable now</strong>
+      </div>
+      <div className="board-grid">
+        <InstallerModule />
+        <SkillCoverageModule />
+      </div>
     </div>
   );
 }
 
-function CodePanel() {
+function ProofStrip() {
   return (
-    <div className="code-panel" aria-label="Extrait de configuration">
-      <div className="window-dots">
-        <span />
-        <span />
-        <span />
-      </div>
-      <p>SKILL.md</p>
-      <pre>{`name: high-end-design
-description: Design system premium
-
-rules:
-  - strong typography
-  - precise spacing
-  - reusable visual taste`}</pre>
-    </div>
-  );
-}
-
-function StyleCard() {
-  return (
-    <div className="style-card" aria-label="Carte de style applique">
+    <section className="proof-strip" id="local" aria-label="Installation locale">
       <div>
-        <Mark />
-        <span>Refero Skills</span>
+        <span className="eyebrow">install path</span>
+        <strong>C:/Users/matth/Desktop/design-skills-db/publish/refero-design-skills</strong>
       </div>
-      <h3>Local pack, instant taste.</h3>
-      <p>23 directions visuelles pretes a installer dans vos projets.</p>
-      <small>Install local</small>
-    </div>
+      <p>
+        La page reste branchée sur ton pack local maintenant. Plus tard, la même surface peut
+        basculer vers une commande GitHub publique sans changer le parcours.
+      </p>
+    </section>
+  );
+}
+
+function SkillModules() {
+  const modules = useMemo(() => shuffleSkills(skillModules).slice(0, 6), []);
+
+  return (
+    <section className="skill-modules" id="styles" aria-label="Modules de skills mis en avant">
+      <div className="modules-heading">
+        <span>randomized modules</span>
+        <h2>Chaque refresh remet des skills différents devant.</h2>
+      </div>
+      <div className="module-list">
+        {modules.map((module, index) => (
+          <article className="skill-module" key={module.name}>
+            <span className="module-index">{String(index + 1).padStart(2, "0")}</span>
+            <div>
+              <h3>{module.name}</h3>
+              <p>{module.description}</p>
+            </div>
+            <strong>{module.role}</strong>
+          </article>
+        ))}
+      </div>
+    </section>
   );
 }
 
@@ -118,7 +255,7 @@ function App() {
   return (
     <main className="site-shell">
       <header className="topbar" aria-label="Navigation principale">
-        <a className="brand-pill" href="#top" aria-label="Refero Design Skills">
+        <a className="brand-chip" href="#top" aria-label="Refero Design Skills">
           <Mark />
           <span>Refero Design Skills</span>
         </a>
@@ -131,40 +268,33 @@ function App() {
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <h1>Goût et compétence pour agents d'IA</h1>
-          <p className="lead">Le framework frontal anti-slop pour générer des interfaces qui tiennent debout.</p>
-          <p className="accent">- Moins de négligence, des designs qui ressortent</p>
-          <p className="body-copy">
-            Un pack local de skills open source pour Cursor, Claude Code, Codex, Gemini CLI,
-            v0, Lovable et vos prochains projets.
+          <div className="release-row" aria-label="Statut du pack">
+            <span>local beta</span>
+            <span>23 skills</span>
+            <span>no remote fetch</span>
+          </div>
+          <h1>Skills to the next level</h1>
+          <p className="lead">
+            Un pack local de skills design pour donner aux agents IA une direction visuelle
+            claire, précise et réutilisable.
           </p>
           <CommandBar />
           <div className="hero-actions">
             <a className="primary-action" href="#local">
-              <span>Installer en local</span>
+              <span>Voir le chemin local</span>
               <ArrowIcon />
             </a>
             <span className="version-dot">Local · v0.1</span>
           </div>
         </div>
 
-        <div className="hero-art" aria-hidden="true">
-          <BrowserPreview />
-          <CodePanel />
-          <StyleCard />
+        <div className="hero-art">
+          <SystemBoard />
         </div>
       </section>
 
-      <section className="below-fold" id="local">
-        <div>
-          <span>Chemin local utilise</span>
-          <strong>C:/Users/matth/Desktop/design-skills-db/publish/refero-design-skills</strong>
-        </div>
-        <p>
-          Lance la commande depuis la racine d'un projet: elle installe le pack local maintenant,
-          et la ligne pourra basculer plus tard vers une source GitHub publique.
-        </p>
-      </section>
+      <ProofStrip />
+      <SkillModules />
     </main>
   );
 }

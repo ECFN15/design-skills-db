@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.vite/
+.cache/
+.turbo/
+
+site/node_modules/
+site/dist/
+
+*.log
+*.tmp
+*.bak
+*.orig
+*.rej

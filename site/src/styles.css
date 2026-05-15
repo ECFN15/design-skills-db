@@ -579,6 +579,14 @@ h1 {
   letter-spacing: 0;
 }
 
+.modules-heading p {
+  max-width: 390px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
 .module-list {
   border-top: 1px solid rgba(255, 255, 255, 0.11);
 }
@@ -590,6 +598,7 @@ h1 {
   align-items: start;
   padding: 20px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+  animation: skillReveal 520ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .module-index {
@@ -778,5 +787,18 @@ h1 {
   *::after {
     scroll-behavior: auto !important;
     transition: none !important;
+    animation: none !important;
+  }
+}
+
+@keyframes skillReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

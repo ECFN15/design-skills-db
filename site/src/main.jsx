@@ -1,66 +1,41 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
 const localInstallCommand =
   "npx skills add ~/Desktop/design-skills-db/publish/refero-design-skills";
 
-const skills = [
-  "technical-sans",
-  "high-end-design",
-  "clean-saas",
-  "editorial-type",
-  "dark-ui",
-  "motion",
-  "minimal-design",
-  "cyber-neon",
-  "serif-display",
-  "technical-ui",
-  "glossy-modern",
-  "vibrant-accents",
-];
+const allSkillModules = [
+  ["technical-sans", "Developer tooling", "Interfaces precises pour docs, CLI, agents IA et produits techniques."],
+  ["high-end-design", "Premium product", "Rythme editorial, surfaces premium et conversion plus calme."],
+  ["clean-saas", "SaaS clarity", "Ecrans lisibles, hierarchie nette et composants faciles a scanner."],
+  ["editorial-type", "Type direction", "Titres plus affirmes et compositions pilotees par la typographie."],
+  ["motion", "Interaction layer", "Transitions utiles, reveal mesure et rythme sans surcharge."],
+  ["dark-ui", "Dark systems", "Produits sombres, contrastes serieux et panneaux denses."],
+  ["serif-display", "Editorial polish", "Moments plus luxueux pour pages de marque et sections hero."],
+  ["technical-ui", "Operational UI", "Dashboards, tables, etats et controles orientes production."],
+  ["cyber-neon", "High signal", "Accents lumineux et interfaces sombres pour produits plus expressifs."],
+  ["editorial-minimal", "Calm pages", "Compositions aeriennes, contenu lisible et rythme plus propre."],
+  ["experimental-type", "Type systems", "Directions typographiques fortes quand la page doit se differencier."],
+  ["expressive-brand", "Brand layer", "Identites visuelles plus marquees pour landing pages et produits."],
+  ["geometric-modern", "Precise layouts", "Grilles nettes, formes simples et composition architecturee."],
+  ["glossy-modern", "Polished SaaS", "Surfaces modernes, details produit et rendu plus premium."],
+  ["high-contrast", "Bold systems", "Hierarchie tres lisible, contrastes francs et sections memorables."],
+  ["light-ui", "Clean product", "Interfaces claires pour outils SaaS, docs et experiences produit."],
+  ["minimal-design", "Sharp restraint", "Moins d'elements, plus de precision dans l'espace et le texte."],
+  ["monochrome-ui", "Neutral systems", "Interfaces sobres, palettes controlees et composants tres lisibles."],
+  ["pastel", "Soft product", "Tons plus doux pour produits accessibles et pages plus legeres."],
+  ["playful-design", "Friendly flows", "Energie visuelle, micro-interactions et tonalite plus humaine."],
+  ["soft-gradients", "Ambient UI", "Transitions de couleur controlees pour pages SaaS plus fluides."],
+  ["utilitarian", "Work surfaces", "Ecrans pratiques, denses et orientes usage repete."],
+  ["vibrant-accents", "Action color", "Accentuation claire des CTA, etats et points de decision."],
+].map(([name, role, description]) => ({ name, role, description }));
 
-const skillModules = [
-  {
-    name: "technical-sans",
-    role: "Developer tooling",
-    description: "Interfaces précises pour docs, CLI, agents IA et produits techniques.",
-  },
-  {
-    name: "high-end-design",
-    role: "Premium product",
-    description: "Rythme éditorial, surfaces premium et conversion plus calme.",
-  },
-  {
-    name: "clean-saas",
-    role: "SaaS clarity",
-    description: "Écrans lisibles, hiérarchie nette et composants faciles à scanner.",
-  },
-  {
-    name: "editorial-type",
-    role: "Type direction",
-    description: "Titres plus affirmés et compositions pilotées par la typographie.",
-  },
-  {
-    name: "motion",
-    role: "Interaction layer",
-    description: "Transitions utiles, reveal mesuré et rythme sans surcharge.",
-  },
-  {
-    name: "dark-ui",
-    role: "Dark systems",
-    description: "Produits sombres, contrastes sérieux et panneaux denses.",
-  },
-  {
-    name: "serif-display",
-    role: "Editorial polish",
-    description: "Moments plus luxueux pour pages de marque et sections hero.",
-  },
-  {
-    name: "technical-ui",
-    role: "Operational UI",
-    description: "Dashboards, tables, états et contrôles orientés production.",
-  },
+const featuredSkills = [
+  { name: "technical-sans", scope: "dev tools" },
+  { name: "clean-saas", scope: "product UI" },
+  { name: "high-end-design", scope: "premium pages" },
+  { name: "technical-ui", scope: "dashboards" },
 ];
 
 function shuffleSkills(items) {
@@ -124,13 +99,6 @@ function CommandBar() {
   );
 }
 
-const featuredSkills = [
-  { name: "technical-sans", scope: "dev tools" },
-  { name: "clean-saas", scope: "product UI" },
-  { name: "high-end-design", scope: "premium pages" },
-  { name: "technical-ui", scope: "dashboards" },
-];
-
 function InstallerModule() {
   return (
     <section className="module-panel installer-module" aria-label="Module d'installation locale">
@@ -149,9 +117,9 @@ source   local pack
 target   current project
 mode     no remote fetch
 
-✓ manifest checked
-✓ 23 skills available
-✓ command copied locally`}</pre>
+OK manifest checked
+OK 23 skills available
+OK command copied locally`}</pre>
       </div>
       <div className="route-list">
         <p>
@@ -219,7 +187,7 @@ function ProofStrip() {
         <strong>C:/Users/matth/Desktop/design-skills-db/publish/refero-design-skills</strong>
       </div>
       <p>
-        La page reste branchée sur ton pack local maintenant. Plus tard, la même surface peut
+        La page reste branchee sur ton pack local maintenant. Plus tard, la meme surface peut
         basculer vers une commande GitHub publique sans changer le parcours.
       </p>
     </section>
@@ -227,17 +195,30 @@ function ProofStrip() {
 }
 
 function SkillModules() {
-  const modules = useMemo(() => shuffleSkills(skillModules).slice(0, 6), []);
+  const [modules, setModules] = useState(() => shuffleSkills(allSkillModules).slice(0, 6));
+
+  useEffect(() => {
+    const rotation = window.setInterval(() => {
+      setModules(shuffleSkills(allSkillModules).slice(0, 6));
+    }, 2600);
+
+    return () => window.clearInterval(rotation);
+  }, []);
 
   return (
     <section className="skill-modules" id="styles" aria-label="Modules de skills mis en avant">
       <div className="modules-heading">
-        <span>randomized modules</span>
-        <h2>Chaque refresh remet des skills différents devant.</h2>
+        <span>23 skill systems</span>
+        <h2>Les styles disponibles remontent en continu.</h2>
+        <p>La rotation expose progressivement le pack complet sans recharger la page.</p>
       </div>
-      <div className="module-list">
+      <div className="module-list" aria-live="polite">
         {modules.map((module, index) => (
-          <article className="skill-module" key={module.name}>
+          <article
+            className="skill-module"
+            key={`${module.name}-${index}`}
+            style={{ animationDelay: `${index * 70}ms` }}
+          >
             <span className="module-index">{String(index + 1).padStart(2, "0")}</span>
             <div>
               <h3>{module.name}</h3>
@@ -276,7 +257,7 @@ function App() {
           <h1>Skills to the next level</h1>
           <p className="lead">
             Un pack local de skills design pour donner aux agents IA une direction visuelle
-            claire, précise et réutilisable.
+            claire, precise et reutilisable.
           </p>
           <CommandBar />
           <div className="hero-actions">
@@ -284,7 +265,7 @@ function App() {
               <span>Voir le chemin local</span>
               <ArrowIcon />
             </a>
-            <span className="version-dot">Local · v0.1</span>
+            <span className="version-dot">Local - v0.1</span>
           </div>
         </div>
 

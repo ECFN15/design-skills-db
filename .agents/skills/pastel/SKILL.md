@@ -1,4 +1,4 @@
-﻿---
+---
 name: pastel
 description: "Use this skill to create soft, warm, approachable, high-contrast pastel websites and interfaces with tinted canvases, readable near-black text, disciplined accent roles, generous spacing, soft components, and calm motion. USE FOR: calm SaaS, wellness, DTC food or beverage, creator platforms, marketplaces, community pages, friendly onboarding, gentle product experiences. DO NOT USE FOR: unrelated backend work, non-visual tasks, harsh cyber/dark aesthetics, or when an existing product design system must be followed exactly."
 ---

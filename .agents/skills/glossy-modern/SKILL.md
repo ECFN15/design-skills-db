@@ -1,4 +1,4 @@
-﻿---
+---
 name: glossy-modern
 description: "Use this skill to create Glossy Modern visual design systems that feel polished, luminous, smooth, premium, dimensional, modern. USE FOR: polished modern SaaS, glassy product pages, premium tech, visual tools, interactive brand systems. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

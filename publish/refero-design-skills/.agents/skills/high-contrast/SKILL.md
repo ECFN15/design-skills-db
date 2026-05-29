@@ -1,4 +1,4 @@
-﻿---
+---
 name: high-contrast
 description: "Use this skill to create stark, readable, high-impact visual identities based on black-white tension, disciplined accent color, sharp layout, poster-like hierarchy, editorial drama, or precise data-console contrast. Use it for brand sites, launch pages, fashion/editorial experiences, technical products, AI tools, portfolios, and interfaces that need immediate visual authority without visual mush. USE FOR: stark brand sites, editorial product pages, technical consoles, monochrome pages, bold launch pages. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

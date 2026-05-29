@@ -1,4 +1,4 @@
-﻿---
+---
 name: monochrome-ui
 description: "Use this skill to create monochrome interfaces built from black, white, gray, inversion, borders, typography, density, and disciplined state design without relying on chromatic decoration. USE FOR: black-white-gray interfaces, monochrome dashboards, editorial systems, technical products, reduced visual identities. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

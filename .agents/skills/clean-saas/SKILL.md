@@ -1,4 +1,4 @@
-﻿---
+---
 name: clean-saas
 description: "Use this skill to create clean SaaS interfaces and websites with calm hierarchy, trustworthy product evidence, precise workflows, legible data, polished enterprise surfaces, and restrained modern visual identity. USE FOR: clean SaaS landing pages, B2B product pages, dashboards, onboarding, pricing, integrations, enterprise trust surfaces. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

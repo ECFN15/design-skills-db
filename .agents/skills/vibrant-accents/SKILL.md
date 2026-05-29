@@ -1,4 +1,4 @@
-﻿---
+---
 name: vibrant-accents
 description: "Use this skill to create modern interfaces, SaaS pages, fintech products, AI tools, campaigns, portfolios, marketplaces, and enterprise product sites with restrained neutral foundations plus vivid, governed accent color for action, focus, category, process, gradient atmosphere, and interaction without rainbow chaos or inaccessible text. USE FOR: vivid accent SaaS, fintech, AI/product launches, marketplaces, portfolios, campaign pages, category color systems. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 name: technical-ui
 description: "Build precise technical interfaces: SaaS workstations, dashboards, consoles, code/data panels, engineering labs, research tools, AI inputs, modular control systems, and high-trust product UIs with rigorous component behavior. USE FOR: technical interfaces, product dashboards, AI tools, developer consoles, workflow apps, dense control surfaces. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

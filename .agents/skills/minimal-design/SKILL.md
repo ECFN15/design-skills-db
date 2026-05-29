@@ -1,4 +1,4 @@
-﻿---
+---
 name: minimal-design
 description: "Use this skill to create Minimal Design visual design systems that feel essential, restrained, quiet, precise, spacious, intentional. USE FOR: minimal websites, refined portfolios, product pages, calm brand systems, simple tools. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 name: expressive-brand
 description: "Use this skill to create expressive brand systems for distinctive websites, product pages, SaaS launches, consumer products, fintech, AI tools, developer platforms, campaigns, portfolios, and identity-led interfaces where typography, color, motif, copy voice, components, motion, and product proof form a repeatable brand language. USE FOR: brand-heavy launches, consumer products, expressive SaaS, campaign pages, identity-led interfaces, product proof with voice/motif. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 name: editorial-minimal
 description: "Use this skill to create Editorial Minimal visual design systems that feel quiet, typographic, spacious, authored, restrained, intentional. USE FOR: minimal editorial pages, portfolios, cultural sites, calm brand systems, writing-heavy layouts, refined landing pages. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

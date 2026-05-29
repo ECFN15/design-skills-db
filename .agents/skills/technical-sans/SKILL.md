@@ -1,4 +1,4 @@
-﻿---
+---
 name: technical-sans
 description: "Use this skill to create Technical Sans visual design systems that feel technical, crisp, rational, precise, engineered, legible. USE FOR: developer tools, AI products, technical SaaS, documentation, infrastructure, precise product interfaces. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 name: cyber-neon
 description: "Use this skill to create Cyber Neon visual design systems that feel electric, nocturnal, luminous, futuristic, sharp, high-energy. USE FOR: futuristic websites, cyberpunk launches, gaming, AI labs, nightlife brands, luminous dark interfaces, techno editorial pages. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

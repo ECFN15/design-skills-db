@@ -1,4 +1,4 @@
-﻿---
+---
 name: high-end-design
 description: "Use this skill to create premium high-end websites and product experiences using restraint, refined type, strong imagery, material cues, luxury pacing, and quiet conversion paths. USE FOR: luxury sites, premium product pages, high-end portfolios, refined commerce, gallery-like brand systems. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

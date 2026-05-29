@@ -1,4 +1,4 @@
-﻿---
+---
 name: playful-design
 description: "Build polished playful visual identities and interfaces with tactile controls, vivid but governed color, mature character or sticker systems, reward/progress feedback, chunky surfaces, spring-like motion, accessible states, and usable product proof. USE FOR: consumer apps, learning products, family or wellness pages, creative tools, product launches, friendly SaaS, gamified onboarding, joyful commerce. DO NOT USE FOR: unrelated backend work, non-visual tasks, serious enterprise/admin surfaces, or when an existing product design system must be followed exactly."
 ---

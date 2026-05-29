@@ -1,4 +1,4 @@
-﻿---
+---
 name: motion
 description: "Use this skill to create Motion visual design systems that feel kinetic, cinematic, responsive, tactile, sequenced, alive. USE FOR: motion-heavy websites, animated product pages, scroll narratives, cinematic launches, interactive brand experiences, kinetic typography, 3D or shader-led hero systems, and UI where movement is part of the information architecture. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

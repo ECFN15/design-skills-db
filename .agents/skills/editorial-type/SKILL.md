@@ -1,4 +1,4 @@
-﻿---
+---
 name: editorial-type
 description: "Use this skill to create editorial typographic websites and interfaces where type carries identity through scale, rhythm, contrast, columns, pull quotes, indexes, and magazine-like hierarchy. USE FOR: typographic websites, magazine-like pages, cultural brands, essays, archives, portfolios, editorial commerce. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

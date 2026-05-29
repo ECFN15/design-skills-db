@@ -12,6 +12,24 @@ function copyDir(source, target) {
   fs.cpSync(source, target, { recursive: true, force: true });
 }
 
+function stripUtf8Bom(file) {
+  const bytes = fs.readFileSync(file);
+  if (bytes.length >= 3 && bytes[0] === 0xef && bytes[1] === 0xbb && bytes[2] === 0xbf) {
+    fs.writeFileSync(file, bytes.subarray(3));
+  }
+}
+
+function stripSkillFileBoms(dir) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    const current = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      stripSkillFileBoms(current);
+    } else if (entry.isFile() && entry.name === "SKILL.md") {
+      stripUtf8Bom(current);
+    }
+  }
+}
+
 const slugs = fs
   .readdirSync(sourceStyleRoot, { withFileTypes: true })
   .filter((entry) => entry.isDirectory())
@@ -27,6 +45,8 @@ for (const slug of slugs) {
   }
   copyDir(source, path.join(publishSkills, slug));
 }
+
+stripSkillFileBoms(publishSkills);
 
 const sharedProtocol = path.join(installableRoot, "_shared");
 if (fs.existsSync(sharedProtocol)) {

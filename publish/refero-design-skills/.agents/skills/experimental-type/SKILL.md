@@ -1,4 +1,4 @@
-﻿---
+---
 name: experimental-type
 description: "Build bold, modern, highly specific visual identities where typography is the main expressive material: industrial precision, editorial display, chromatic block systems, type-first brutalism, and specimen-led layouts. USE FOR: experimental typography, creative studios, cultural pages, posters, campaigns, unconventional portfolios. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 name: serif-display
 description: "Use this skill to create Serif Display visual design systems that feel editorial, elegant, literary, premium, expressive, composed. USE FOR: serif-led brand sites, luxury, editorial pages, cultural projects, typographic portfolios, premium commerce. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

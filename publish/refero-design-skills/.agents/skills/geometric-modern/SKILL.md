@@ -1,4 +1,4 @@
-﻿---
+---
 name: geometric-modern
 description: "Use this skill to create modern geometric identities with strong grids, repeated shapes, modular composition, crisp rhythm, precise spacing, and layout systems where geometry explains the brand. USE FOR: geometric brand systems, modern portfolios, architecture, design districts, shape-led SaaS, structured editorial pages. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

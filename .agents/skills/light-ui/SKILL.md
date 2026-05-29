@@ -1,4 +1,4 @@
-﻿---
+---
 name: light-ui
 description: "Build modern light interfaces with strong visual identity: quiet white chrome, precise SaaS surfaces, soft glow, control-panel light chassis, and airy component galleries. USE FOR: bright applications, clean dashboards, SaaS pages, productivity tools, documentation, approachable product surfaces. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

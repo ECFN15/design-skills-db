@@ -1,4 +1,4 @@
-﻿---
+---
 name: dark-ui
 description: "Use this skill to create Dark UI visual design systems that feel focused, immersive, premium, technical, calm, deep. USE FOR: dark dashboards, AI tools, premium apps, developer consoles, command centers, immersive product interfaces. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

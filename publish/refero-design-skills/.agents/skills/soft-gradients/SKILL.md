@@ -1,4 +1,4 @@
-﻿---
+---
 name: soft-gradients
 description: "Use this skill to create Soft Gradients visual design systems that feel ambient, smooth, calm, luminous, soft, modern. USE FOR: soft gradient websites, AI tools, wellness, calm SaaS, atmospheric brand pages, polished modern interfaces. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---

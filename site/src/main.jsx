@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./styles.css";
 
 const localInstallCommand =
-  "npx skills add ~/Desktop/design-skills-db/publish/refero-design-skills";
+  "npx skills add C:/Users/matth/Desktop/design-skills-db/publish/refero-design-skills";
 
 const allSkillModules = [
   ["technical-sans", "Developer tooling", "Interfaces precises pour docs, CLI, agents IA et produits techniques."],
@@ -124,7 +124,7 @@ OK command copied locally`}</pre>
       <div className="route-list">
         <p>
           <span>path</span>
-          <strong>~/Desktop/design-skills-db/publish</strong>
+          <strong>C:/Users/matth/Desktop/design-skills-db/publish</strong>
         </p>
         <p>
           <span>later</span>

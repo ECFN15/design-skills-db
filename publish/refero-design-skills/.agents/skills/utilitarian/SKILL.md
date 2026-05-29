@@ -1,4 +1,4 @@
-﻿---
+---
 name: utilitarian
 description: "Use this skill to create utilitarian interfaces that prioritize function, speed, legibility, controls, repeated action, information density, and operational trust without decorative noise. USE FOR: admin tools, internal systems, data entry, operational dashboards, documentation utilities, productivity workflows. DO NOT USE FOR: unrelated backend work, non-visual tasks, or when an existing product design system must be followed exactly."
 ---
